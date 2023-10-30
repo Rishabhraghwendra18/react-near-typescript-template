@@ -7,7 +7,7 @@ import './index.css'
 const wallet = new Wallet({ createAccessKeyFor: process.env.CONTRACT_NAME || undefined })
 
 window.onload = async () => {
-
+   await wallet.startUp()
   ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
       <App wallet={wallet}/>
